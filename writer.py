@@ -1,12 +1,16 @@
 from pynput import mouse
+from multiprocessing import Process
+import sys
 import time
+start_time = time.perf_counter()
 def on_click(x, y, button, pressed):
+    i = time.perf_counter() - start_time
     f = open('script.txt','r+')
     old = f.read()
     print('{0} at {1}'.format(
         'Pressed' if pressed else 'Released',
-        (time.perf_counter())))
-    s = time.perf_counter()
+        (i)))
+    s = i
     g = str(s)
     old = str(old)
     s = str(s)
