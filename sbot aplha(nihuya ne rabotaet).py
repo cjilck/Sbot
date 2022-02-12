@@ -8,8 +8,6 @@ def on_click(x, y, button, pressed):
     g = str(s)
         # Stop listener
     if not pressed:
-        print(g)
-        print(*f)
         return on_click
 # Collect events until released
 with mouse.Listener(
