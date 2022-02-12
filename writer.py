@@ -1,6 +1,4 @@
 from pynput import mouse
-from multiprocessing import Process
-import sys
 import time
 start_time = time.perf_counter()
 def on_click(x, y, button, pressed):
